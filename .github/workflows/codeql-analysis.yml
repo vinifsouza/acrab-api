@@ -72,6 +72,3 @@ jobs:
     
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.4.0
-    
-    - name: ansible-lint
-      uses: ansible/ansible-lint-action@v4.1.0.post0
