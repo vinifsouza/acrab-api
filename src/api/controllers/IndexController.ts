@@ -1,13 +1,21 @@
 import { NextFunction, Request, Response } from 'express';
 
 import { API_VERSION } from '../../config';
+import Controller from './Controller';
 
-class IndexController {
+class IndexController extends Controller {
   async index(req: Request, res: Response, next: NextFunction) {
     try {
-      res.status(200).json('Acrab API - Version: ', API_VERSION);
-    } catch (e) {
-      next(e);
+      const data = {
+        name: `Acrab API`,
+        version: API_VERSION,
+        author: 'Vinícius Souza',
+        description: '',
+        repository: 'https://github.com/vinifsouza/acrab-api'
+      };
+      super.response(res, data);
+    } catch (err) {
+      next(err);
     }
   }
 }
