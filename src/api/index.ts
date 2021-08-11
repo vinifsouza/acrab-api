@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { API_PORT } from '../config';
 import apiRouter from './routes';
 import express from 'express';

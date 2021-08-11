@@ -1,0 +1,30 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "prettier"
+  ],
+  "rules": {
+    "eqeqeq": "off",
+    "semi": "off",
+    "@typescript-eslint/semi": "error",
+    "no-console": "error",
+    "max-len": [
+      "warn",
+      100,
+      2,
+      {
+        "ignorePattern": "^(import|export)",
+        "ignoreUrls": true
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ]
+  }
+}

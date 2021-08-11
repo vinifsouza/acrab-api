@@ -1,18 +1,16 @@
 import * as Yup from 'yup';
 
-import Exception from '../../core/exceptions/Exception'
+import Exception from '../../core/exceptions/Exception';
 import { ILoginRequest } from '../../core/interfaces/validators/AuthenticationValidator';
 import { Request } from 'express';
 
 class AuthenticationValidator {
   public async loginValidate(req: Request): Promise<ILoginRequest> {
     const schema = Yup.object({
-      login: Yup
-        .string()
+      login: Yup.string()
         .typeError('login is not valid')
         .required('login is required'),
-      password: Yup
-        .string()
+      password: Yup.string()
         .typeError('password is not valid')
         .required('password is required'),
     });
