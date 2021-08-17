@@ -2,13 +2,21 @@ import * as jwt from 'jsonwebtoken';
 
 import { NextFunction, Request, Response } from 'express';
 
-import { API_SECRET } from '../../config';
+import { ACRAB_API_SECRET } from '../../config';
 import Exception from '../exceptions/Exception';
+import AuthenticationRepository from '../repositories/AuthenticationRepository';
 
 class AuthenticationService {
-  public login(login: string, password: string): Promise<any> {
-    const token = jwt.sign({ login, password }, API_SECRET, { expiresIn: 300 });
-    return token;
+  async login(reqLogin: string, reqPassword: string): Promise<string> {
+    const loginFromDb = await AuthenticationRepository.getUser(reqLogin, reqPassword);
+
+    if (!loginFromDb) {
+      throw new Exception(401, 'Invalid credentials');
+    }
+
+    const { login, password, secret } = loginFromDb;
+
+    return jwt.sign({ login, password }, secret, { expiresIn: 300 });
   }
 
   verifyJWT(req: Request, res: Response, next: NextFunction) {
@@ -18,7 +26,7 @@ class AuthenticationService {
       throw new Exception(401, 'No token provided');
     }
 
-    jwt.verify(token, API_SECRET, (err, decoded) => {
+    jwt.verify(token, ACRAB_API_SECRET, (err, decoded) => {
       if (err) {
         throw new Exception(401, 'Invalid token');
       }
