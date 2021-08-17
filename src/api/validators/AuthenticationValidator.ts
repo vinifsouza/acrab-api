@@ -1,11 +1,11 @@
 import * as Yup from 'yup';
 
 import Exception from '../../core/exceptions/Exception';
-import { ILoginRequest } from '../../core/interfaces/validators/AuthenticationValidator';
+import { IValidatorLoginRequest } from '../../core/interfaces/IAuthentication';
 import { Request } from 'express';
 
 class AuthenticationValidator {
-  public async loginValidate(req: Request): Promise<ILoginRequest> {
+  public async loginValidate(req: Request): Promise<IValidatorLoginRequest> {
     const schema = Yup.object({
       login: Yup.string()
         .typeError('login is not valid')
@@ -15,7 +15,7 @@ class AuthenticationValidator {
         .required('password is required'),
     });
 
-    return await schema.validate(req.body, { abortEarly: false }).catch(err => {
+    return schema.validate(req.body, { abortEarly: false }).catch(err => {
       const errors = {};
 
       err.inner.forEach(error => {
