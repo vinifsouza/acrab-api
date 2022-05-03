@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tsnd src/index.ts --respawn --no-notify --transpileOnly --no-deps",
     "commit": "git-cz",
+    "start": "node dist/index.js",
     "build": "tsc"
   },
   "husky": {
