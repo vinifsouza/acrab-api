@@ -149,7 +149,7 @@
       }
     ],
     "dataPedido": "14/04/2022",
-    "status": "Em Processo de Separação",
+    "status": "Pedido Enviado",
     "dataEntrega": "26/04/2022",
     "dataEstimadaEntrega": "2022-04-18",
     "dataEstimadaEntregaFormatada": "08/04/2022",
@@ -181,7 +181,7 @@
       }
     ],
     "dataPedido": "02/04/2022",
-    "status": "Aguardando Confirmação de Pagamento",
+    "status": "Em Trânsito",
     "dataEntrega": "21/04/2022",
     "dataEstimadaEntrega": "2022-04-29",
     "dataEstimadaEntregaFormatada": "18/04/2022",
@@ -207,7 +207,7 @@
       }
     ],
     "dataPedido": "07/04/2022",
-    "status": "Encerrado",
+    "status": "Entregue",
     "dataEntrega": "05/04/2022",
     "dataEstimadaEntrega": "2022-04-09",
     "dataEstimadaEntregaFormatada": "25/04/2022",
@@ -251,7 +251,7 @@
       }
     ],
     "dataPedido": "25/04/2022",
-    "status": "Entregue",
+    "status": "Em Aguardo",
     "dataEntrega": "23/04/2022",
     "dataEstimadaEntrega": "2022-04-16",
     "dataEstimadaEntregaFormatada": "15/04/2022",
@@ -303,7 +303,7 @@
       }
     ],
     "dataPedido": "27/04/2022",
-    "status": "Pedido Enviado",
+    "status": "Encerrado",
     "dataEntrega": "29/04/2022",
     "dataEstimadaEntrega": "2022-04-20",
     "dataEstimadaEntregaFormatada": "05/04/2022",
@@ -341,7 +341,7 @@
       }
     ],
     "dataPedido": "09/04/2022",
-    "status": "Em Trânsito",
+    "status": "Cancelado",
     "dataEntrega": "08/04/2022",
     "dataEstimadaEntrega": "2022-04-22",
     "dataEstimadaEntregaFormatada": "01/04/2022",
@@ -379,7 +379,7 @@
       }
     ],
     "dataPedido": "06/04/2022",
-    "status": "Pagamento Confirmado",
+    "status": "Pedido Enviado",
     "dataEntrega": "07/04/2022",
     "dataEstimadaEntrega": "2022-04-19",
     "dataEstimadaEntregaFormatada": "08/04/2022",
@@ -467,7 +467,7 @@
       }
     ],
     "dataPedido": "07/04/2022",
-    "status": "Pagamento Confirmado",
+    "status": "Entregue",
     "dataEntrega": "30/04/2022",
     "dataEstimadaEntrega": "2022-04-24",
     "dataEstimadaEntregaFormatada": "17/04/2022",
@@ -511,7 +511,7 @@
       }
     ],
     "dataPedido": "12/04/2022",
-    "status": "Pedido Enviado",
+    "status": "Em Aguardo",
     "dataEntrega": "20/04/2022",
     "dataEstimadaEntrega": "2022-04-07",
     "dataEstimadaEntregaFormatada": "23/04/2022",
@@ -561,7 +561,7 @@
       }
     ],
     "dataPedido": "29/04/2022",
-    "status": "Pagamento Confirmado",
+    "status": "Cancelado",
     "dataEntrega": "07/04/2022",
     "dataEstimadaEntrega": "2022-04-12",
     "dataEstimadaEntregaFormatada": "18/04/2022",
