@@ -1,18 +1,19 @@
-import AuthenticationController from './controllers/AuthenticationController';
 import express from 'express';
-import indexController from './controllers/IndexController';
+
+import IndexController from './controllers/IndexController';
+import OrderController from './controllers/OrderController';
 import Exception from '../core/exceptions/Exception';
+
+import { STATUS_CODE } from '../core/constants/controller';
 
 const router = express.Router();
 
-router.get('/', indexController.index);
-
-router.post('/login', AuthenticationController.login);
-
-router.use(AuthenticationController.verify);
+router.get('/', IndexController.index);
+router.get('/api/Orders/list', OrderController.orderList);
+router.get('/api/Orders/retrieve', OrderController.orderRetrive);
 
 router.all('*', () => {
-  throw new Exception(404, 'Page not found');
+  throw new Exception(STATUS_CODE.NOT_FOUND, 'Page not found');
 });
 
 export default router;
