@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsnd src/index.ts --respawn --no-notify --transpileOnly --no-deps",
     "prepare": "husky install",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "build": "tsc"
   },
   "husky": {
     "hooks": {
