@@ -12,6 +12,6 @@ app.use('/', apiRouter);
 
 app.use(handleErrors);
 
-app.listen(5000, () => {
+app.listen(ACRAB_API_PORT, () => {
   console.log('Acrab API - Server Started on Port ', ACRAB_API_PORT, '🔥');
 });
