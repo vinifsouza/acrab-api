@@ -51,25 +51,3 @@ description: Testando
 {% swagger src=".gitbook/assets/openapi.json" path="/store/order/{orderId}" method="delete" %}
 [openapi.json](.gitbook/assets/openapi.json)
 {% endswagger %}
-
-{% swagger src=".gitbook/assets/openapi.json" path="/user" method="post" %}
-[openapi.json](.gitbook/assets/openapi.json)
-{% endswagger %}
-
-{% swagger src=".gitbook/assets/openapi.json" path="/user/createWithList" method="post" %}
-[openapi.json](.gitbook/assets/openapi.json)
-{% endswagger %}
-
-{% swagger src=".gitbook/assets/openapi.json" path="/user/login" method="get" %}
-[openapi.json](.gitbook/assets/openapi.json)
-{% endswagger %}
-
-{% swagger src=".gitbook/assets/openapi.json" path="/user/logout" method="get" %}
-[openapi.json](.gitbook/assets/openapi.json)
-{% endswagger %}
-
-{% swagger method="get" path="/users" baseUrl="" summary="Testando" %}
-{% swagger-description %}
-AAAAAAAAAAAAA
-{% endswagger-description %}
-{% endswagger %}
